@@ -3,7 +3,7 @@
 #convert smi to ko.srt
 targetdir='/volume1/video/해외영화'
 targetdir2='/volume1/video/해외시리즈'
-smidir='/volume1/homes/yklovett/script/smi2srt'
+smidir='/volume1/homes/계정명/script/smi2srt'
 
 find $targetdir $targetdir2 -name "*.smi" | grep -v @eaDir | while read oldfile
 	do
