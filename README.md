@@ -18,27 +18,11 @@ smi 자막파일을 ko.srt 로 변환해주는 툴입니다.
 !. 스크립트 설명
 
 지정한 경로에서 smi파일을 검색하여, 동일한 파일명의 ko.srt 파일이 없다면 변환 후 smi파일 삭제
-기존 smi 파일을 그대로 두고 싶다면, rm -f 라인을 주석처리
-
-#!/bin/sh
-
-#convert smi to ko.srt
 targetdir='/volume1/video/해외영화'     ## 변경할 경로1
 targetdir2='/volume1/video/해외시리즈'       ## 변경할 경로2
 smidir='/volume1/homes/계정명/script/smi2srt'      ## 바이너리를 설치한 위치
 
-find $targetdir $targetdir2 -name "*.smi" | grep -v @eaDir | while read oldfile
-	do
-	  newfile=${oldfile%smi}ko.srt
-		if [ -f "$newfile" ]
-			then
-		        	echo "$oldfile" "Skip!!"
-		else
-        		echo "$oldfile => $newfile" converted
-			$smidir/smi2srt "$oldfile" "$newfile"
-			rm -f "$oldfile"
-		fi
-	done
+기존 smi 파일을 그대로 두고 싶다면, rm -f 라인을 주석처리
 
 
 !. 자동 실행 사용 방법
