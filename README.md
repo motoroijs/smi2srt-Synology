@@ -1,4 +1,4 @@
-# smi2srt-for-Synology-918-
+# smi2srtSynology918
 
 smi 자막파일을 ko.srt 로 변환해주는 툴입니다.
 이미 존재하는 smi2srt binary 들 중, Synology 918+에서 정상 동작하는 파일을 공유합니다.
