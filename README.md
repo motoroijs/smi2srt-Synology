@@ -9,8 +9,7 @@ smi 자막파일을 ko.srt 로 변환해주는 툴입니다.
 2. 나스의 적당한 위치에 압축 해제
     ex) /volume1/homes/계정명/script/smi2srt
 3. 실행권한 부여
-    $ cd /volume1/homes/계정명/script/smi2srt
-    $ chmod +x *
+    $ cd /volume1/homes/계정명/script/smi2srt ; chmod +x *
 4. 스크립트 복사
     $ cp smi2srt.sh /usr/bin/smi2srt
 
