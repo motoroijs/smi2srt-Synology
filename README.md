@@ -13,6 +13,7 @@ smi 자막파일을 ko.srt 로 변환해주는 툴입니다.
 4. 스크립트 복사
     $ cp smi2srt.sh /usr/bin/smi2srt
 5. axfree 님의 smi2srt 설치
+
     $ sudo npm install smi2srt -g
 
 
