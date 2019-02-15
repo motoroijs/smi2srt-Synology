@@ -51,4 +51,5 @@ smidir='/volume1/homes/계정명/script/smi2srt'   >  바이너리 압축을 해
 
 # 라이센스
 George Shuklin
+
 axfree
