@@ -29,7 +29,9 @@ smi 자막파일을 ko.srt 로 변환해주는 툴입니다.
 (기존 smi 파일을 그대로 두고 싶다면, rm -f 라인을 주석처리)
 
 targetdir='/volume1/video/해외영화'   > 변경할 경로1
+
 targetdir2='/volume1/video/해외시리즈'  >  변경할 경로2
+
 smidir='/volume1/homes/계정명/script/smi2srt'   >  바이너리 압축을 해제한 위치
 
 
