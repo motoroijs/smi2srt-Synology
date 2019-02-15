@@ -9,6 +9,7 @@ smidir='/volume1/homes/yklovett/script/smi2srt'
 
 find "$targetdir" "$targetdir2" -name "*.smi" | grep -v "@eaDir" | grep -v "#recycle" | while read filename
     do
+
 		# sort <body> contain
 		grep -i "<body>" "$filename"
 		if [ $? -eq 0 ]
@@ -21,7 +22,7 @@ find "$targetdir" "$targetdir2" -name "*.smi" | grep -v "@eaDir" | grep -v "#rec
 		fi
 	done
 
-		# convert include <body> in subtitles
+# convert include <body> in subtitles
 if [ -f "$smidir/grep_list" ]
 then
 	while read oldfile
@@ -43,7 +44,7 @@ rm -f $smidir/grep_list
 else
 	echo "### no subtitles to convert (include body)"
 fi
-       # convert doesn`t include <body> in subtitles
+# convert doesn`t include <body> in subtitles
 if [ -f "$smidir/grep_notlist" ]
 then
 	while read oldfile2
