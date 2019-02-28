@@ -35,7 +35,7 @@ targetdir2='/volume1/video/해외시리즈'  >  변경할 경로2
 
 smidir='/volume1/homes/계정명/script/smi2srt'   >  바이너리 압축을 해제한 위치
 
-bkupdir='/volume1/log/smi2srt' > 변환하기 전 자막을 백업해둘 위치
+bkupdir='/volume1/log/smi2srt' > 변환하기 전 원본자막을 백업해둘 위치
 
 
 # 자동 실행 설정 방법
