@@ -25,6 +25,7 @@ smi 자막파일을 ko.srt 로 변환하고, charset 을 UTF-8로 해주는 툴�
    
 8. piconv 설치
 시놀로지 패키지 센터에서 perl 설치후 링크 생성
+
    $ ln -s "/volume1/@appstore/Perl/usr/local/bin/piconv" "/usr/local/bin/piconv"
 
 
