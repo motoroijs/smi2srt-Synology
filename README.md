@@ -12,15 +12,20 @@ smi 자막파일을 ko.srt 로 변환하고, charset 을 UTF-8로 해주는 툴�
     $ cd /volume1/homes/계정명/script/smi2srt ; chmod +x *
 4. 스크립트 복사
     $ cp smi2srt.sh /usr/bin/smi2srt
-5. axfree 님의 smi2srt 설치
+    
+5. 원본 백업 경로 생성
+   $ mkdir -p /volume1/log/smi2srt
+
+6. axfree 님의 smi2srt 설치
 
     $ sudo npm install smi2srt -g
 
-6. chartdect 설치
+7. chartdect 설치
    $ sudo pip install chardet
    
-7. piconv 설치
+8. piconv 설치
 시놀로지 패키지 센터에서 perl 설치후 링크 생성
+
 ln -s "/volume1/@appstore/Perl/usr/local/bin/piconv" "/usr/local/bin/piconv"
 
 
