@@ -1,7 +1,7 @@
 # smi2srt-Synology
 
-smi 자막파일을 ko.srt 로 변환해주는 툴입니다.
-이미 존재하는 smi2srt binary 들 중, Synology 918+에서 정상 동작하도록 약간 수정하여 공유합니다.
+smi 자막파일을 ko.srt 로 변환하고, charset 을 UTF-8로 해주는 툴입니다.
+
 
 # 설치
 
@@ -16,6 +16,12 @@ smi 자막파일을 ko.srt 로 변환해주는 툴입니다.
 
     $ sudo npm install smi2srt -g
 
+6. chartdect 설치
+   $ sudo pip install chardet
+   
+7. piconv 설치
+시놀로지 패키지 센터에서 perl 설치후 링크 생성
+ln -s "/volume1/@appstore/Perl/usr/local/bin/piconv" "/usr/local/bin/piconv"
 
 
 # 스크립트 설명
@@ -36,6 +42,8 @@ targetdir2='/volume1/video/해외시리즈'  >  변경할 경로2
 smidir='/volume1/homes/계정명/script/smi2srt'   >  바이너리 압축을 해제한 위치
 
 bkupdir='/volume1/log/smi2srt' > 변환하기 전 원본자막을 백업해둘 위치
+
+자막 깨짐을 방지하기 위해, ko.srt로 변환이 완료된 파일의 charset 을 확인하여 UTF-8 로 변환
 
 
 # 자동 실행 설정 방법
