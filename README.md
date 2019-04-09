@@ -62,7 +62,7 @@ bkupdir='/volume1/log/smi2srt' > 변환하기 전 원본자막을 백업해둘 �
 1. telnet / ssh 접속 후, smi2srt 입력하여 수동 실행 가능
 
 
-# 기존 존재하던 ko.srt 자막파일들의 charset 변경
+# charset 변경
 charconvert.sh : 자막 깨짐 현상을 방지하기 위해, 기존 존재하던 charset 을 UTF-8 로 변경하는 스크립트 추가
 targetdir 을 수정하면 하위 경로의 *.ko.srt 파일을 변경
 
