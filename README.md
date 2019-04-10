@@ -7,14 +7,21 @@ smi 자막파일을 ko.srt 로 변환하고, charset 을 UTF-8로 해주는 툴�
 # 설치
 
 1. 파일 다운로드
+
 2. 나스의 적당한 위치에 압축 해제
+
     ex) /volume1/homes/계정명/script/smi2srt
+    
 3. 실행권한 부여
+
     $ cd /volume1/homes/계정명/script/smi2srt ; chmod +x *
+    
 4. 스크립트 복사
+
     $ cp smi2srt.sh /usr/bin/smi2srt
     
 5. 원본 백업 경로 생성
+
    $ mkdir -p /volume1/log/smi2srt
 
 6. axfree 님의 smi2srt 설치
@@ -22,6 +29,7 @@ smi 자막파일을 ko.srt 로 변환하고, charset 을 UTF-8로 해주는 툴�
     $ sudo npm install smi2srt -g
 
 7. chartdect 설치
+
    $ sudo pip install chardet
    
    $ /usr/lib/python2.7/site-packages/chardet/cli/chardetect.py 파일의 81번 라인 변경
@@ -38,6 +46,7 @@ smi 자막파일을 ko.srt 로 변환하고, charset 을 UTF-8로 해주는 툴�
 # 스크립트 설명
 
 지정한 경로에서 smi파일을 검색하고, 자막 파일 내부에 body 를 포함하는지 확인하여
+
 포함하는 파일과 미포함하는 파일의 리스트를 작성
     
 body 를 포함하는 파일은 George Shuklin 님의 smi2srt 바이너리를 사용하여 ko.srt 로 변환
