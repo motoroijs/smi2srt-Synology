@@ -65,7 +65,7 @@ smidir='/volume1/homes/계정명/script/smi2srt'   >  바이너리 압축을 해
 
 bkupdir='/volume1/log/smi2srt' > 변환하기 전 원본자막을 백업해둘 위치
 
-자막 깨짐을 방지하기 위해, ko.srt로 변환이 완료된 파일의 charset 을 확인하여 UTF-8 이 아니라면 UTF-8로 변환
+자막 깨짐을 방지하기 위해, ko.srt로 변환이 완료된 파일의 charset 을 확인하여 UTF-8 이 아니라면 UTF-8로 변환하는 기능 추가
 
 
 # 자동 실행 설정 방법
