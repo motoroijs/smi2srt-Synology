@@ -12,6 +12,8 @@ smidir='/volume1/homes/yklovett/script/smi2srt'
 bkupdir='/volume1/log/smi2srt'
 today=`date '+%y%m%d'`
 
+rm -f $smidir/grep_list $smidir/grep_notlist
+
 find "$targetdir" "$targetdir2" -name "*.smi" | grep -v "@eaDir" | grep -v "#recycle" | while read filename
 
     do
@@ -43,7 +45,9 @@ then
 			# backup origin smi
 			mkdir -p $bkupdir/$today
 			mv "$oldfile" $bkupdir/$today
-			charset=`chardetect "$newfile" | awk -F":" '{print $2}' | awk -F" " '{print $1}'`
+			sleep 1
+			echo "$smidir/chardetect_log"
+			charset=`chardetect "$newfile" | awk -F":" '{print $2}' | awk -F" " '{print $1}' | sed '/^ *$/d'`
 			echo "$charset" | grep -i "no"
 			 if [ $? -eq 0 ]
 				then
@@ -56,7 +60,7 @@ then
 						else
 		                    echo "converting charset $charset to UTF-8"
 				            newfilec=${newfile}c
-		                    piconv -c -f $charset -t utf8 "$newfile" > "$newfilec"
+		                    piconv -c -f "$charset" -t utf8 "$newfile" > "$newfilec"
 						    rm -f "$newfile"
 		                    mv "$newfilec" "$newfile"
 					fi
@@ -85,7 +89,8 @@ then
 			# rm -f "$oldfile2"
 			# backup origin smi
 			mv "$oldfile2" $bkupdir/$today
-			charset2=`chardetect "$newfile2" | awk -F":" '{print $2}' | awk -F" " '{print $1}'`
+			sleep 1
+			charset2=`chardetect "$newfile2" | awk -F":" '{print $2}' | awk -F" " '{print $1}' | sed '/^ *$/d'`
 			echo "$charset2" | grep -i "no"
 				if [ $? -eq 0 ]
 					then
@@ -98,7 +103,7 @@ then
 							else
 			                    echo "converting charset $charset2 to UTF-8"
 			                    newfile2c=${newfile2}c
-			                    piconv -c -f $charset2 -t utf8 "$newfile2" > "$newfile2c"
+			                    piconv -c -f "$charset2" -t utf8 "$newfile2" > "$newfile2c"
 			                    rm -f "$newfile2"
 			                    mv "$newfile2c" "$newfile2"
 						fi
