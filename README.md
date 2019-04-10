@@ -22,6 +22,8 @@ smi 자막파일을 ko.srt 로 변환하고, charset 을 UTF-8로 해주는 툴�
 
 7. chartdect 설치
    $ sudo pip install chardet
+   $ /usr/lib/python2.7/site-packages/chardet/cli/chardetect.py 파일의 81번 라인 변경
+   print(description_of(f, f.name)) >> print(description_of(f))
    
 8. piconv 설치
 시놀로지 패키지 센터에서 perl 설치후 링크 생성
