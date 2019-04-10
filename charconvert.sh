@@ -2,13 +2,13 @@
 
 export LC_ALL=en_US.utf8
 export LANG=en_US.utf8
-targetdir='/volume1/download/series'
+targetdir='/volume1/video/애니'
 
 find "$targetdir" -type f -name "*.ko.srt" | grep -v "@eaDir" | grep -v "#recycle" | while read oldfile
 	do
 		newfile=${oldfile}bk
 		rm -f "$newfile"
-		charset=`/bin/chardetect "$oldfile" | awk -F":" '{print $2}' | awk -F" " '{print $1}'`
+		charset=`chardetect "$oldfile" | awk -F":" '{print $2}' | awk -F" " '{print $1}'`
 		echo "$charset" | grep -i "no"
 			if [ $? -eq 0 ]
 				then
