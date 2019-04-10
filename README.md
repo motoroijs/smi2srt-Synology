@@ -80,6 +80,7 @@ bkupdir='/volume1/log/smi2srt' > 변환하기 전 원본자막을 백업해둘 �
 
 # charset 변경
 charconvert.sh : 자막 깨짐 현상을 방지하기 위해, 기존 존재하던 charset 을 UTF-8 로 변경하는 스크립트 추가
+
 targetdir 을 수정하면 하위 경로의 *.ko.srt 파일을 변경
 
 
