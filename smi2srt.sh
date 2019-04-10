@@ -43,7 +43,7 @@ then
 			# backup origin smi
 			mkdir -p $bkupdir/$today
 			mv "$oldfile" $bkupdir/$today
-			charset=`/bin/chardetect "$newfile" | awk -F":" '{print $2}' | awk -F" " '{print $1}'`
+			charset=`chardetect "$newfile" | awk -F":" '{print $2}' | awk -F" " '{print $1}'`
 			echo "$charset" | grep -i "no"
 			 if [ $? -eq 0 ]
 				then
@@ -85,7 +85,7 @@ then
 			# rm -f "$oldfile2"
 			# backup origin smi
 			mv "$oldfile2" $bkupdir/$today
-			charset2=`/bin/chardetect "$newfile2" | awk -F":" '{print $2}' | awk -F" " '{print $1}'`
+			charset2=`chardetect "$newfile2" | awk -F":" '{print $2}' | awk -F" " '{print $1}'`
 			echo "$charset2" | grep -i "no"
 				if [ $? -eq 0 ]
 					then
