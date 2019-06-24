@@ -1,6 +1,6 @@
 # smi2srt-Synology
 
-smi 자막파일을 ko.srt 로 변환하고, charset 을 UTF-8로 해주는 스크립트입니다.
+smi 자막파일을 ko.srt 로 변환하고, charset 을 UTF-8로 변경해주는 스크립트입니다.
 
 
 # 설치
